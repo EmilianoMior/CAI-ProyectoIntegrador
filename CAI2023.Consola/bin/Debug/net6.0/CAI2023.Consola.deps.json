@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CAI2023.Consola/1.0.0": {
+        "dependencies": {
+          "CAI2023.Modelo": "1.0.0",
+          "CAI2023.Negocio": "1.0.0"
+        },
+        "runtime": {
+          "CAI2023.Consola.dll": {}
+        }
+      },
+      "CAI2023.Modelo/1.0.0": {
+        "runtime": {
+          "CAI2023.Modelo.dll": {}
+        }
+      },
+      "CAI2023.Negocio/1.0.0": {
+        "dependencies": {
+          "CAI2023.Modelo": "1.0.0"
+        },
+        "runtime": {
+          "CAI2023.Negocio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CAI2023.Consola/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CAI2023.Modelo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CAI2023.Negocio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
