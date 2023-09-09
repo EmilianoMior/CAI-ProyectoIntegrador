@@ -1,0 +1,15 @@
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\bin\Debug\net6.0\CAI2023.Negocio.deps.json
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\bin\Debug\net6.0\CAI2023.Negocio.dll
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\bin\Debug\net6.0\CAI2023.Negocio.pdb
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.csproj.AssemblyReference.cache
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.AssemblyInfoInputs.cache
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.AssemblyInfo.cs
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.dll
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\refint\CAI2023.Negocio.dll
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.pdb
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\ref\CAI2023.Negocio.dll
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\bin\Debug\net6.0\CAI2023.Modelo.dll
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\bin\Debug\net6.0\CAI2023.Modelo.pdb
+C:\Users\cesar\source\repos\CAI2023.Consola\CAI2023.Negocio\obj\Debug\net6.0\CAI2023.Negocio.csproj.CopyComplete
