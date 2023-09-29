@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CAI2023.Modelo;
 using CAI2023.Negocio;
 
@@ -130,7 +130,7 @@ namespace CAI2023.Consola
             Console.Write("NombreUsuario: ");
             nuevoUsuario.NombreUsuario = Console.ReadLine();
             Console.Write("Password: ");
-            AltaDeUsuario();
+            
             nuevoUsuario.Password = Console.ReadLine();
 
             if (ValidacionUsuario.ValidarUsuario(nuevoUsuario))
@@ -149,6 +149,7 @@ namespace CAI2023.Consola
 
         static void PrintMenuAdminstrador()
         {
+            
             Console.WriteLine("Bienvenido al menu del Administrador");
             Console.WriteLine("Ingrese una opcion");
             Console.WriteLine("1 - Alta de usuarios Supervisores");
@@ -166,7 +167,24 @@ namespace CAI2023.Consola
             Console.WriteLine("13 - Reporte de stock crítico");
             Console.WriteLine("14 - Reporte de ventas por vendedor ");
             Console.WriteLine("15 - Reporte de productos más vendido por categoría");
+
+            string opcionMenuAdmin;
+            opcionMenuAdmin = Console.ReadLine();
+
+            switch (opcionMenuAdmin)
+            {
+                case "1": BajaDeUsuario(); break;
+                case "2": AltaDeUsuario(); ; break;
+                
+                    
+                    break;
+            }
+
+
+
+
         }
+        
 
         static void PrintMenuSupervisor()
         {
