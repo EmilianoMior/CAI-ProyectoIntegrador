@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CAI2023.Consola;
 
 namespace CAI2023.Modelo
 {
@@ -53,6 +54,26 @@ namespace CAI2023.Modelo
             string contraseniaTemporal = new string(Enumerable.Repeat(caracteres, 8).Select(s => s[random.Next(s.Length)]).ToArray());
             return contraseniaTemporal;
         }
+        public static void BajaDeUsuario(string nombreUsuario)
+        {
+            var usuario = usuarioListado.Find(u => u.NombreUsuario == nombreUsuario);
+
+            if (usuario == null)
+            {
+                Console.WriteLine("El usuario no existe.");
+                return;
+            }
+
+            if (usuario.EsAdministrador)
+            {
+                Console.WriteLine("No se puede dar de baja a un administrador.");
+                return;
+            }
+
+            Usuario.Remove(usuario);
+            Console.WriteLine("Usuario dado de baja correctamente.");
+        }
+
 
 
 
