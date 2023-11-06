@@ -2,69 +2,123 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "CAI2023.Modelo/1.0.0": {
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CAI2023.Datos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CAI2023.Entidades": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "bin/placeholder/CAI2023.Datos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CAI2023.Datos.dll": {}
+        }
+      },
+      "CAI2023.Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/CAI2023.Modelo.dll": {}
+          "bin/placeholder/CAI2023.Entidades.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CAI2023.Modelo.dll": {}
+          "bin/placeholder/CAI2023.Entidades.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "CAI2023.Modelo/1.0.0": {
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "CAI2023.Datos/1.0.0": {
       "type": "project",
-      "path": "../CAI2023.Modelo/CAI2023.Modelo.csproj",
-      "msbuildProject": "../CAI2023.Modelo/CAI2023.Modelo.csproj"
+      "path": "../CAI2023.Datos/CAI2023.Datos.csproj",
+      "msbuildProject": "../CAI2023.Datos/CAI2023.Datos.csproj"
+    },
+    "CAI2023.Entidades/1.0.0": {
+      "type": "project",
+      "path": "../CAI2023.Modelo/CAI2023.Entidades.csproj",
+      "msbuildProject": "../CAI2023.Modelo/CAI2023.Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CAI2023.Modelo >= 1.0.0"
+      "CAI2023.Datos >= 1.0.0",
+      "CAI2023.Entidades >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AKDemi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/juanpabloprociuk/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Negocio\\CAI2023.Negocio.csproj",
+      "projectUniqueName": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Negocio/CAI2023.Negocio.csproj",
       "projectName": "CAI2023.Negocio",
-      "projectPath": "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Negocio\\CAI2023.Negocio.csproj",
-      "packagesPath": "C:\\Users\\AKDemi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Negocio\\obj\\",
+      "projectPath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Negocio/CAI2023.Negocio.csproj",
+      "packagesPath": "/Users/juanpabloprociuk/.nuget/packages/",
+      "outputPath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Negocio/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\AKDemi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/juanpabloprociuk/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Modelo\\CAI2023.Modelo.csproj": {
-              "projectPath": "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Modelo\\CAI2023.Modelo.csproj"
+            "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/CAI2023.Datos.csproj": {
+              "projectPath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/CAI2023.Datos.csproj"
+            },
+            "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/CAI2023.Entidades.csproj": {
+              "projectPath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/CAI2023.Entidades.csproj"
             }
           }
         }
@@ -84,11 +138,17 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.214\\RuntimeIdentifierGraph.json"
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
       }
     }
   }

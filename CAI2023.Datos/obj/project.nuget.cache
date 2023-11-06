@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ujXUdPjZQ2c4U5acPvG2EpZSut0Kbp9fmhToV5QLrQupH+d/lM3O95Gyucheboeptr8J5kkG8Xfow2YGPgms4w==",
+  "success": true,
+  "projectFilePath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/CAI2023.Datos.csproj",
+  "expectedPackageFiles": [
+    "/Users/juanpabloprociuk/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

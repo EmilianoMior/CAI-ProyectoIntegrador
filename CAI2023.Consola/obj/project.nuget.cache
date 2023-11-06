@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g4Uo8Eqzvq9MvsBb5E5R5z5cbbwkapvwbkqaqU/Vfi8447XbKMHKTOD2SneaNTYZG6mMPm2+KW3Xm6KTXUVxWQ==",
+  "dgSpecHash": "fq7jJCC03V+fB4JndOkN6yKkn03Zq++g6WxIhvGgSrwFpxUCU5AoSsStnBqZTT9NVs/7+v2SfJAkH8Hkj5njwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Consola\\CAI2023.Consola.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Consola/CAI2023.Consola.csproj",
+  "expectedPackageFiles": [
+    "/Users/juanpabloprociuk/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

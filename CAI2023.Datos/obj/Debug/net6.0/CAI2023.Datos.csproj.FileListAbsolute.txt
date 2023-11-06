@@ -1,0 +1,5 @@
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/obj/Debug/net6.0/CAI2023.Datos.csproj.AssemblyReference.cache
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/obj/Debug/net6.0/CAI2023.Datos.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/obj/Debug/net6.0/CAI2023.Datos.AssemblyInfoInputs.cache
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/obj/Debug/net6.0/CAI2023.Datos.AssemblyInfo.cs
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Datos/obj/Debug/net6.0/CAI2023.Datos.csproj.CoreCompileInputs.cache

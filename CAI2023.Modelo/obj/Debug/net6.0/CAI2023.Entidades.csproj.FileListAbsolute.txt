@@ -1,0 +1,12 @@
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.csproj.AssemblyReference.cache
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.AssemblyInfoInputs.cache
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.AssemblyInfo.cs
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.csproj.CoreCompileInputs.cache
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/bin/Debug/net6.0/CAI2023.Entidades.deps.json
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/bin/Debug/net6.0/CAI2023.Entidades.dll
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/bin/Debug/net6.0/CAI2023.Entidades.pdb
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.dll
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/refint/CAI2023.Entidades.dll
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/CAI2023.Entidades.pdb
+/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Modelo/obj/Debug/net6.0/ref/CAI2023.Entidades.dll

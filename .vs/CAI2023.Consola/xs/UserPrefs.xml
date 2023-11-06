@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{72E70892-3BF1-4888-B6C3-6832667AC561}|Default" GitUserInfo="UsingMD">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.CAI2023.Consola PreferredExecutionTarget="MonoDevelop.Default" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CAI2023.Consola/Program.cs">
+    <Files>
+      <File FileName="CAI2023.Consola/Program.cs" Line="18" Column="27" />
+      <File FileName="CAI2023.Negocio/ValidacionUsuario.cs" Line="11" Column="1" />
+      <File FileName="CAI2023.Modelo/Usuario.cs" Line="8" Column="42" />
+      <File FileName="CAI2023.Datos/Program.cs" Line="74" Column="9" />
+      <File FileName="CAI2023.Datos/ClientesDatos.cs" Line="29" Column="1" />
+      <File FileName="CAI2023.Datos/Productos.cs" Line="80" Column="6" />
+      <File FileName="CAI2023.Datos/Operaciones.cs" Line="93" Column="61" />
+      <File FileName="CAI2023.Datos/Operaciones.cs" Line="57" Column="68" />
+      <File FileName="CAI2023.Modelo/Productos.cs" Line="33" Column="6" />
+      <File FileName="CAI2023.Negocio/Administrador.cs" Line="72" Column="1" />
+      <File FileName="CAI2023.Negocio/Supervisor.cs" Line="8" Column="3" />
+      <File FileName="CAI2023.Negocio/VendedorNegocio.cs" Line="4" Column="1" />
+      <File FileName="CAI2023.Modelo/Proveedores.cs" Line="28" Column="10" />
+      <File FileName="CAI2023.Negocio/Proveedores.cs" Line="15" Column="32" />
+      <File FileName="CAI2023.Modelo/TransactionResult.cs" Line="9" Column="2" />
+      <File FileName="CAI2023.Modelo/Clientes.cs" Line="27" Column="26" />
+      <File FileName="CAI2023.Modelo/Venta.cs" Line="25" Column="2" />
+      <File FileName="CAI2023.Negocio/ReporteNegocio.cs" Line="13" Column="1" />
+      <File FileName="CAI2023.Datos/Basedatos.cs" Line="6" Column="1" />
+      <File FileName="CAI2023.Consola/Utilidades/EmptyClass.cs" Line="282" Column="6" />
+      <File FileName="CAI2023.Datos/UsuarioDatos.cs" Line="84" Column="1" />
+      <File FileName="CAI2023.Negocio/ProductoNegocio.cs" Line="50" Column="30" />
+      <File FileName="CAI2023.Negocio/VentaNegocio.cs" Line="50" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CAI2023.Consola" expanded="True">
+            <Node name="CAI2023.Datos">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Utilidades" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CAI2023.Datos PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

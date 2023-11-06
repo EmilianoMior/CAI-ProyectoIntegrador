@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uxF9WfXaAP4J6QiSFINKmvR71UZA8iKdG2LFDvalHFaJX8j6ZkKw7T2EzILCNAwPVhnueR6Ke4n8Ot4IFiyBJA==",
+  "dgSpecHash": "fgsqyKgik9F4cHKTlWCUg8Al8xi/SJ1aAnfYaVbgwRbT39Nvbfb3POMhyNRC4ydUVH+/SDzwvVO9RuPKCLH8PQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AKDemi\\Documents\\Facultad\\PoryectoIntegrador\\CAI2023.Consola\\CAI2023.Negocio\\CAI2023.Negocio.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/juanpabloprociuk/Documents/GitHub/CAI/CAI-ProyectoIntegrador/CAI2023.Negocio/CAI2023.Negocio.csproj",
+  "expectedPackageFiles": [
+    "/Users/juanpabloprociuk/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

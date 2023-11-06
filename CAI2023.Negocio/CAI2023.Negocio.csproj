@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CAI2023.Modelo\CAI2023.Modelo.csproj" />
+    <ProjectReference Include="..\CAI2023.Modelo\CAI2023.Entidades.csproj" />
+    <ProjectReference Include="..\CAI2023.Datos\CAI2023.Datos.csproj" />
   </ItemGroup>
-
 </Project>

@@ -1,163 +1,72 @@
-using System;
-using CAI2023.Modelo;
+ using System;
+using System.Net.NetworkInformation;
+using CAI2023.Entidades;
+using CAI2023.Consola.Utilidades;
 using CAI2023.Negocio;
-
 namespace CAI2023.Consola
 {
     public class Program
     {
-        private static List<Usuario> usuarioListado = new List<Usuario>();
-        private static Usuario usuarioLogeado = null;
+        private static UsuarioNegocio usuarioNegocio;
+        private static ProveedorNegocio proveedorNegocio;
+        private static AdministradorNegocio administradorNegocio;
+        private static VentaNegocio ventaNegocio;
+        private static ProductoNegocio productoNegocio;
+        private static ReporteNegocio reporteNegocio;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            usuarioListado.Add(new Usuario(1, "Emiliano", "Mior", "emiliano@gmail.com", "emior", "1234", "ADMIN", true, false, DateTime.Now));
+            administradorNegocio = new AdministradorNegocio();
+            proveedorNegocio = new ProveedorNegocio();
+            ventaNegocio = new VentaNegocio();
+            reporteNegocio = new ReporteNegocio();
+            productoNegocio = new ProductoNegocio();
+            usuarioNegocio = new UsuarioNegocio();
 
-            Login();
+            Console.WriteLine("Bienvenido a Cai 2023 - Gestion de Stock!\n");
+            Console.ReadLine();
 
-            string opcionMenu;
+            MenuPrincipal();
+        }
+
+        public static void MenuPrincipal()
+        {
+            Console.WriteLine("1. Iniciar sesión");
+            Console.WriteLine("2. Registrarse");
+            Console.Write("Seleccione una opción: ");
+
+            string opcion = Console.ReadLine();
+
+            int valor;
+            valor = Validaciones.PedirInt("\nSeleccione una opcion:", 0, 5);
+            Console.Clear();
             do
             {
-                switch (usuarioLogeado.Perfil)
+                switch (valor)
                 {
-                    case "ADMIN": PrintMenuAdminstrador(); break;
-                    case "SUPERVISOR": PrintMenuSupervisor(); break;
-                }
-
-                Console.WriteLine("99 - Cerrar Sesion");
-                Console.WriteLine("0 - Cerrar Programa");
-                Console.Write("Opcion: ");
-                opcionMenu = Console.ReadLine();
-
-                switch (opcionMenu)
-                {
-                    case "1": CargarUsuario("SUPERVISOR"); break;
-                    case "2": CargarUsuario("VENDEDOR"); break;
-                    case "99":
+                    case 0:
+                        Console.WriteLine("Muchas gracias por usar el sistema!!\nPresiona una tecla para salir");
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                        break;
+                    case 1:
                         Login();
                         break;
-                }
-
-            } while (opcionMenu != "0");
-        }
-
-        static void Login()
-        {
-            Console.Clear();
-
-            string nombreUsuario;
-            string password;
-            int reintentos = 0;
-
-            usuarioLogeado = null;
-
-            while (usuarioLogeado == null)
-            {
-                Console.Write("Usuario: ");
-                nombreUsuario = Console.ReadLine();
-                Console.Write("Password: ");
-                password = Console.ReadLine();
-
-                foreach (Usuario u in usuarioListado)
-                {
-                    if (nombreUsuario == u.NombreUsuario && password == u.Password)
-                    {
-                        usuarioLogeado = u;
-                        Console.WriteLine("Usuario Logeado!");
-                        Console.WriteLine("Continuar...");
-
-                        if (reintentos >= 3)
-                        {
-                            usuarioListado[usuarioListado.IndexOf(u)].Activo = false;
-                        }
-
-                        if (usuarioLogeado.CambiarPassword == true || CalcularDiferenciaDias(usuarioLogeado.FechaPassword, DateTime.Now) >= 30)
-                        {
-                            CambiarPassword(usuarioLogeado.UsuarioId);
-                        }
-
-                        Console.ReadKey();
+                    case 2:
+                        AgregarUsuario();
                         break;
-                    }
-                }
 
-                if (usuarioLogeado == null)
-                {
-                    reintentos++;
                 }
-            }
+            } while (valor != 0);
         }
 
-        static void CambiarPassword(int usuarioId)
+        public static void MenuAdministrador()
         {
-            Console.Clear();
-            Console.Write("Nuevo Password: ");
-            string nuevoPassword = Console.ReadLine();
-
-            // Agregar validacion de password.
-
-            for (int i = 0; i < usuarioListado.Count; i++)
-            {
-                if (usuarioListado[i].UsuarioId == usuarioId)
-                {
-                    usuarioListado[i].Password = nuevoPassword;
-                    usuarioListado[i].FechaPassword = DateTime.Now;
-                    usuarioListado[i].Activo = true;
-                    usuarioListado[i].CambiarPassword = false;
-                }
-            }
-
-            Console.WriteLine("Password Cambiado!");
-            Console.ReadKey();
-        }
-
-        static void CargarUsuario(string perfil)
-        {
-            Usuario nuevoUsuario = new Usuario();
-
-            nuevoUsuario.Activo = false;
-            nuevoUsuario.CambiarPassword = true;
-            nuevoUsuario.Perfil = perfil;
-
-            Console.Clear();
-            Console.WriteLine("Ingrese los datos del Usuario");
-            Console.Write("Nombre: ");
-            nuevoUsuario.Nombre = Console.ReadLine();
-            Console.Write("Apellido: ");
-            nuevoUsuario.Apellido = Console.ReadLine();
-            Console.Write("Email: ");
-            nuevoUsuario.Email = Console.ReadLine();
-            Console.Write("NombreUsuario: ");
-            nuevoUsuario.NombreUsuario = Console.ReadLine();
-            Console.Write("Password: ");
-            
-            nuevoUsuario.Password = Console.ReadLine();
-
-            if (ValidacionUsuario.ValidarUsuario(nuevoUsuario))
-            {
-                nuevoUsuario.UsuarioId = usuarioListado.Count() + 1;
-                nuevoUsuario.FechaPassword = DateTime.Now;
-
-                usuarioListado.Add(nuevoUsuario);
-                // Usuario Cargado!
-            }
-            else
-            {
-                Console.WriteLine("Usuario invalido!");
-            }
-        }
-
-        static void PrintMenuAdminstrador()
-        {
-            
-            Console.WriteLine("Bienvenido al menu del Administrador");
+            Console.WriteLine("Esta en el menu Administrador");
             Console.WriteLine("Ingrese una opcion");
-            Console.WriteLine("1 - Alta de usuarios Supervisores");
-            Console.WriteLine("2 - Modificación de usuarios Supervisores ");
+            Console.WriteLine("1 - Alta de usuario");
+            Console.WriteLine("2 - Modificación de usuarios ");
             Console.WriteLine("3 - Baja de usuarios Supervisores");
-            Console.WriteLine("4 - Alta de usuarios Vendedores");
-            Console.WriteLine("5 - Modificación de usuarios Vendedores");
-            Console.WriteLine("6 - Baja de usuarios Vendedores");
             Console.WriteLine("7 - Alta de Proveedores");
             Console.WriteLine("8 - Modificación de Proveedores");
             Console.WriteLine("9 - Baja de Proveedores");
@@ -173,34 +82,92 @@ namespace CAI2023.Consola
 
             switch (opcionMenuAdmin)
             {
-                case "1": BajaDeUsuario(); break;
-                case "2": AltaDeUsuario(); ; break;
-                
-                    
+                case "1":
+                    administradorNegocio.AgregarUsuario();
+                    break;
+                case "2":
+                    administradorNegocio.BajaDeUsuario();
                     break;
             }
-
-
-
-
-        }
-        
-
-        static void PrintMenuSupervisor()
-        {
-            Console.WriteLine("Bienvenido al menu del Supervisor");
-            Console.WriteLine("Ingrese una opcion:");
         }
 
-        static int CalcularDiferenciaDias(DateTime fechaInicio, DateTime fechaFin)
+        private static Usuario AgregarUsuario()
         {
-            // Calcular la diferencia en días utilizando el método Subtract
-            TimeSpan diferencia = fechaFin - fechaInicio;
+            {
+                string nombre = Validaciones.PedirStr("Ingrese el nombre del usuario:");
+                string apellido = Validaciones.PedirStr("Ingrese un apellido para el usuario:");
+                string direccion = Validaciones.PedirStr("Ingrese una dirección para el usuario:");
+                string telefono = Validaciones.PedirStr("Ingrese un numero de teléfono para el usuario:"); ;
+                string email = Validaciones.PedirEmail("Ingrese un email para el usuario");
+                string nombreusuario = Validaciones.PedirStr("Ingrese un email para el usuario");
+                string contraseña = Validaciones.PedirStr("Ingrese una contraseña para el usuario");
+                bool ingresar;
 
-            // La propiedad TotalDays de TimeSpan devuelve la diferencia en días
-            int diferenciaDias = (int)diferencia.TotalDays;
+                Usuario usuario = new Usuario(nombre, apellido, direccion, telefono, email, nombreusuario, contraseña);
+                Console.Clear();
+                ingresar = Validaciones.ValidarSN("Está a punto de ingresar el cliente, está de acuerdo?");
+                if (ingresar)
+                {
+                    usuarioNegocio.AgregarUsuario(usuario);
+                    Console.WriteLine("Cliente ingresado correctamente! Pulse una tecla para continuar");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("Ha decidido no ingresar el cliente. Pulse una tecla para continuar");
+                    Console.ReadKey();
+                    usuario = null;
+                }
+                return usuario;
+            }
+        }
 
-            return Math.Abs(diferenciaDias); // Math.Abs() para asegurarse de que el resultado sea siempre positivo
+        private static void Login()
+        {
+            var usuarioDatos = new UsuarioNegocio();
+
+            List<Usuario> listaUsuarios = usuarioDatos.TraerUsuarios();
+
+            // Solicitar al usuario que ingrese nombre de usuario y contraseña
+            Console.Write("Nombre de Usuario: ");
+            string nombreUsuario = Validaciones.PedirStr("Ingrese su nombre de usuario:");
+            Console.Write("Contraseña: ");
+            string contraseña = Validaciones.PedirStr("Ingrese su contraseña:");
+
+            // Buscar el usuario en la lista
+            Usuario usuarioEncontrado = listaUsuarios.FirstOrDefault(u => u.NombreUsuario == nombreUsuario && u.Contraseña == contraseña);
+
+            if (usuarioEncontrado != null)
+            {
+                Console.WriteLine("Acceso concedido. Bienvenido, " + usuarioEncontrado.Nombre);
+            }
+            else
+            {
+                Console.WriteLine("Nombre de usuario o contraseña incorrectos. Acceso denegado.");
+            }
+
+            Console.ReadLine();
+        }
+
+        public static void MenuSupervisor()
+        {
+
+            Console.WriteLine("Menu principal");
+            Console.WriteLine("1 - Menu Cliente");
+
+        }
+
+        public static void MenuVendedor()
+        {
+
+            Console.WriteLine("Menu principal");
+            Console.WriteLine("1 - Menu Cliente");
         }
     }
 }
+
+    
+
+
+  
+
