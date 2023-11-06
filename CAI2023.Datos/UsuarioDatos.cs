@@ -1,17 +1,18 @@
-﻿    using System;
-    using CAI2023.Datos.Utilidades;
-    using Microsoft.Win32;
-    using System.Collections.Specialized;
-    using CAI2023.Entidades;
-    using Newtonsoft.Json;
+﻿using System;
+using CAI2023.Datos.Utilidades;
+using Microsoft.Win32;
+using System.Collections.Specialized;
+using CAI2023.Entidades;
+using Newtonsoft.Json;
 using System.Data.SqlTypes;
+
 
 namespace CAI2023.Datos
 {
     public class UsuarioDatos
 
     {
-        public TransactionResult Agregarusuario(AdministradorNegocio usuario)
+        public TransactionResult Agregarusuario(UsuarioDatos usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -22,7 +23,7 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public TransactionResult Cambiarcontrasena(AdministradorNegocio usuario)
+        public TransactionResult Cambiarcontrasena(UsuarioDatos usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -33,7 +34,7 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public TransactionResult Login(AdministradorNegocio usuario)
+        public TransactionResult Login(UsuarioDatos usuario)
         {
             NameValueCollection obj = ReverseMap(usuario); //serializacion -> json
 
@@ -44,14 +45,14 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public List<AdministradorNegocio> TraerUsuariosActivos()
+        public List<UsuarioDatos> TraerUsuariosActivos()
         {
             string json2 = WebHelper.Get("Usuario/TraerUsuariosActivos" + ToString()); // trae un texto en formato json de una web
-            List<AdministradorNegocio> resultado = MapList(json2);
+            List<UsuarioDatos> resultado = MapList(json2);
             return resultado;
         }
 
-        public TransactionResult EliminarUsuario(AdministradorNegocio usuario)
+        public TransactionResult EliminarUsuario(UsuarioDatos usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -62,7 +63,7 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public TransactionResult Reactivarusuario(AdministradorNegocio usuario)
+        public TransactionResult Reactivarusuario(UsuarioDatos usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -72,7 +73,7 @@ namespace CAI2023.Datos
 
             return lst;
         }
-        private NameValueCollection ReverseMap(AdministradorNegocio usuario)
+        private NameValueCollection ReverseMap(Usuario usuario)
         {
             NameValueCollection n = new NameValueCollection();
             n.Add("Nombre", usuario.Nombre);
@@ -83,18 +84,17 @@ namespace CAI2023.Datos
             n.Add("Usuario", usuario.NombreUsuario.ToString());
             n.Add("Contraseña", usuario.Contraseña);
             return n;
-
     }
 
-    private List<AdministradorNegocio> MapList(string json)
+    private List<UsuarioDatos> MapList(string json)
         {
-            List<AdministradorNegocio> lst = JsonConvert.DeserializeObject<List<AdministradorNegocio>>(json); // deserializacion
+            List<UsuarioDatos> lst = JsonConvert.DeserializeObject<List<UsuarioDatos>>(json); // deserializacion
             return lst;
         }
 
-        private AdministradorNegocio MapObj(string json)
+        private UsuarioDatos MapObj(string json)
         {
-            AdministradorNegocio lst = JsonConvert.DeserializeObject<AdministradorNegocio>(json); // deserializacion
+            UsuarioDatos lst = JsonConvert.DeserializeObject<UsuarioDatos>(json); // deserializacion
             return lst;
         }
     }
