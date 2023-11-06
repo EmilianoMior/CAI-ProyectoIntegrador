@@ -12,7 +12,7 @@ namespace CAI2023.Datos
     public class UsuarioDatos
 
     {
-        public TransactionResult Agregarusuario(UsuarioDatos usuario)
+        public TransactionResult Agregarusuario(Usuario usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -23,7 +23,7 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public TransactionResult Cambiarcontrasena(UsuarioDatos usuario)
+        public TransactionResult Cambiarcontrasena(Usuario usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -34,7 +34,7 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public TransactionResult Login(UsuarioDatos usuario)
+        public TransactionResult Login(Usuario usuario)
         {
             NameValueCollection obj = ReverseMap(usuario); //serializacion -> json
 
@@ -52,7 +52,7 @@ namespace CAI2023.Datos
             return resultado;
         }
 
-        public TransactionResult EliminarUsuario(UsuarioDatos usuario)
+        public TransactionResult EliminarUsuario(Usuario usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
@@ -63,7 +63,7 @@ namespace CAI2023.Datos
             return lst;
         }
 
-        public TransactionResult Reactivarusuario(UsuarioDatos usuario)
+        public TransactionResult Reactivarusuario(Usuario usuario)
         {
             NameValueCollection obj = ReverseMap(usuario);
 
